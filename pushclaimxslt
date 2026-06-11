@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="xml" indent="yes"/>
+<xsl:template match="/">
+<Pushclaim><xsl:apply-templates select="//AcknowledgepushClaim_2905"/></Pushclaim>
+</xsl:template>
+<xsl:template match="AcknowledgepushClaim_2905">
+<ClaimDetails>
+<TransactionType><xsl:value-of select="TransactionType"/></TransactionType>
+<ClaimId><xsl:value-of select="ClaimID"/></ClaimId>
+<Document><xsl:value-of select="Document"/></Document>
+<Line><xsl:value-of select="Line"/></Line>
+<BusinessPartner><xsl:value-of select="BusinessPartner"/></BusinessPartner>
+<SuppliersInvoiceNumber><xsl:value-of select="SupplierInvoiceNumber"/></SuppliersInvoiceNumber>
+<PayToBusinessPartner><xsl:value-of select="PayToBusinessPartner"/></PayToBusinessPartner>
+<DocumentDate><xsl:value-of select="DocumentDate"/></DocumentDate>
+<DocumentType><xsl:value-of select="DocumentType"/></DocumentType>
+<Currency><xsl:value-of select="Currency"/></Currency>
+<CurrencyRate><xsl:value-of select="CurrencyRate"/></CurrencyRate>
+<Amount><xsl:value-of select="Amount"/></Amount>
+<RateDate><xsl:value-of select="RateDate"/></RateDate>
+<AmountInInvoiceCurrency><xsl:value-of select="AmountInvoiceCurrency"/></AmountInInvoiceCurrency>
+<CountryForTax><xsl:value-of select="CountryForTax"/></CountryForTax>
+<DueDate><xsl:value-of select="DueDate"/></DueDate>
+<TransactionReference><xsl:value-of select="TransactionReference"/></TransactionReference>
+<PaymentTerms><xsl:value-of select="PaymentTerms"/></PaymentTerms>
+<FiscalYear><xsl:value-of select="FiscalYear"/></FiscalYear>
+<FiscalPeriod><xsl:value-of select="FiscalPeriod"/></FiscalPeriod>
+<TaxYear><xsl:value-of select="TaxYear"/></TaxYear>
+<TaxPeriod><xsl:value-of select="TaxPeriod"/></TaxPeriod>
+<Ledger><xsl:value-of select="Ledger"/></Ledger>
+<LNStatus><xsl:value-of select="LNStatus"/></LNStatus>
+<PaymentDate><xsl:value-of select="PaymentDate"/></PaymentDate>
+<PaymentAmount><xsl:value-of select="PaymentAmount"/></PaymentAmount>
+<PaymentReferenceNumber><xsl:value-of select="PaymentReferenceNumber"/></PaymentReferenceNumber>
+<EmployeeCode><xsl:value-of select="EmployeeCode"/></EmployeeCode>
+</ClaimDetails>
+</xsl:template>
+</xsl:stylesheet>
