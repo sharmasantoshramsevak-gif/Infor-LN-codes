@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:output method="xml" indent="yes"/>
+
+<xsl:template match="/">
+
+    <PushClaims>
+
+        <xsl:variable name="claim"
+            select="//*[local-name()='AcknowledgePushClaim_2905']"/>
+
+        <ClaimDetails>
+
+            <TransactionType>
+                <xsl:value-of select="$claim/*[local-name()='TransactionType']"/>
+            </TransactionType>
+
+            <ClaimId>
+                <xsl:value-of select="$claim/*[local-name()='ClaimID']"/>
+            </ClaimId>
+
+            <Document>
+                <xsl:value-of select="$claim/*[local-name()='Document']"/>
+            </Document>
+
+            <Line>
+                <xsl:value-of select="$claim/*[local-name()='Line']"/>
+            </Line>
+
+            <BusinessPartner>
+                <xsl:value-of select="$claim/*[local-name()='BusinessPartner']"/>
+            </BusinessPartner>
+
+            <SuppliersInvoiceNumber>
+                <xsl:value-of select="$claim/*[local-name()='SupplierInvoiceNumber']"/>
+            </SuppliersInvoiceNumber>
+
+            <PayToBusinessPartner>
+                <xsl:value-of select="$claim/*[local-name()='PayToBusinessPartner']"/>
+            </PayToBusinessPartner>
+
+            <DocumentDate>
+                <xsl:value-of select="$claim/*[local-name()='DocumentDate']"/>
+            </DocumentDate>
+
+            <DocumentType>
+                <xsl:value-of select="$claim/*[local-name()='DocumentType']"/>
+            </DocumentType>
+
+            <Currency>
+                <xsl:value-of select="$claim/*[local-name()='Currency']"/>
+            </Currency>
+
+            <CurrencyRate1>
+                <xsl:value-of select="$claim/*[local-name()='CurrencyRate']"/>
+            </CurrencyRate1>
+
+            <Amount>
+                <xsl:value-of select="$claim/*[local-name()='Amount']"/>
+            </Amount>
+
+            <RateDate>
+                <xsl:value-of select="$claim/*[local-name()='RateDate']"/>
+            </RateDate>
+
+            <AmountInInvoiceCurrency>
+                <xsl:value-of select="$claim/*[local-name()='AmountInInvoiceCurrency']"/>
+            </AmountInInvoiceCurrency>
+
+            <CountryForTax>
+                <xsl:value-of select="$claim/*[local-name()='CountryForTax']"/>
+            </CountryForTax>
+
+            <DueDate>
+                <xsl:value-of select="$claim/*[local-name()='DueDate']"/>
+            </DueDate>
+
+            <TransactionReference>
+                <xsl:value-of select="$claim/*[local-name()='TransactionReference']"/>
+            </TransactionReference>
+
+            <PaymentTerms>
+                <xsl:value-of select="$claim/*[local-name()='PaymentTerms']"/>
+            </PaymentTerms>
+
+            <FiscalYear>
+                <xsl:value-of select="$claim/*[local-name()='FiscalYear']"/>
+            </FiscalYear>
+
+            <FiscalPeriod>
+                <xsl:value-of select="$claim/*[local-name()='FiscalPeriod']"/>
+            </FiscalPeriod>
+
+            <TaxYear>
+                <xsl:value-of select="$claim/*[local-name()='TaxYear']"/>
+            </TaxYear>
+
+            <TaxPeriod>
+                <xsl:value-of select="$claim/*[local-name()='TaxPeriod']"/>
+            </TaxPeriod>
+
+            <Ledger>
+                <xsl:value-of select="$claim/*[local-name()='Ledger']"/>
+            </Ledger>
+
+            <LNStatus>
+                <xsl:value-of select="$claim/*[local-name()='LNStatus']"/>
+            </LNStatus>
+
+            <PaymentDate>
+                <xsl:value-of select="$claim/*[local-name()='PaymentDate']"/>
+            </PaymentDate>
+
+            <PaymentAmount>
+                <xsl:value-of select="$claim/*[local-name()='PaymentAmount']"/>
+            </PaymentAmount>
+
+            <PaymentReferenceNumber>
+                <xsl:value-of select="$claim/*[local-name()='PaymentReferenceNumber']"/>
+            </PaymentReferenceNumber>
+
+            <EmployeeCode>
+                <xsl:value-of select="$claim/*[local-name()='EmployeeCode']"/>
+            </EmployeeCode>
+
+            <BatchNo>
+                <xsl:value-of select="$claim/*[local-name()='BatchNo']"/>
+            </BatchNo>
+
+        </ClaimDetails>
+
+    </PushClaims>
+
+</xsl:template>
+
+</xsl:stylesheet>
